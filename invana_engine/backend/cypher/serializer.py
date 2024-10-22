@@ -84,7 +84,7 @@ class CypherSerializer:
                 properties.append(Property(key=key, value=value))
             return RelationShip(id=edge['_id'], label=edge['_labels'][0],
                             outV=self.create_vertex_object(edge['_start_node']) ,
-                            inV=self.create_edge_object(edge['_end_node']) ,
+                            inV=self.create_vertex_object(edge['_end_node']) ,
                             properties=properties)
         except Exception as e :
             logger.debug(f"Failed to create Relationship object with error : {e.__str__()}")
