@@ -1,8 +1,8 @@
 import logging
 import importlib
-from .backend.base import BackendAbstract
-from .backend import GremlinBackend, CypherBackend
-from .backend.exceptions import BackendNotFound
+from .backends.base import BackendAbstract
+from .backends import GremlinBackend, CypherBackend
+from .backends.exceptions import BackendNotFound
 from invana_engine import settings
 
 
